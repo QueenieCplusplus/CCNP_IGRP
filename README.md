@@ -208,6 +208,16 @@ Interior Gateway Routing Protocol
     
 
 
+# IGRP = Cisco RIP
+
+距離向量的，distance vector，然而與 RIP 不同之處在於：
+
+(1) 不受限於 15 個 hops，適用於大型互聯網路。
+
+(2) 提供 4 個路徑，藉以節省頻寬。
+
+(3) 每 90 秒廣播一次。
+
 
 
 
