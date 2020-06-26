@@ -83,7 +83,19 @@ Interior Gateway Routing Protocol
     |192.168.4.0| E0  | 0/down |
     +-----------+-----+--------+
     
+ 
+ 
     
+* Poison Reverse + * Triggered Updates, 毒性逆向 ＋ 觸發更新
+
+此法規定原本最先廣播該路徑的 GW 遇到路徑中斷時，必須將路徑修改至無限長 (= 16)，此資訊亦將保留若干週期。
+    
+   
+   
+ 
+ 
+
+   
 * Hold Down Timer, 倒數計時更新法
 
 此更新方式是用來解決故障資訊比正當資訊傳送的慢的問題，原理是讓故障資訊保持充足時間傳送，當閘道器收到此網路 unreachable 時，一定時間內，例如 60 秒內，閘道器不會再接收關於這網路的路徑資訊。
@@ -164,13 +176,8 @@ Interior Gateway Routing Protocol
     |192.168.4.0| E0  | 0/down |
     +-----------+-----+--------+
     
- 
-
-* Poison Reverse, 毒性逆向
 
 
-
-* Triggered Updates, 觸發更新
 
 
 
