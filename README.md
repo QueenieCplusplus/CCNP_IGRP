@@ -273,3 +273,7 @@ Interior Gateway Routing Protocol
 
 此為 Xerox 所開發的通訊協定，使用向量距離或是經過的閘道數 Hops Count 作為距離單位。此協定將閘道器分為主動的廣播和被動的收聽，同一時間下，一閘道器主動，則其餘閘道器皆為被動，以避免廣播風暴。
 
+# Broadcast Storm
+
+https://zh.wikipedia.org/wiki/廣播風暴
+
