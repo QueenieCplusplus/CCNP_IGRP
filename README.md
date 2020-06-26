@@ -239,7 +239,7 @@ Interior Gateway Routing Protocol
 
 4. MTU 最大傳送單元（傳輸位元組）
 
-5. Reliability 可靠度、可信度
+5. Reliability 可靠度、可信度（距離值越小越可靠）
 
 # 預設的距離值
 
@@ -254,7 +254,9 @@ Interior Gateway Routing Protocol
       +--------+---------------+
       |  BGP   |       20      |
       +--------+---------------+
+      |        |               |
       |  IGRP  |      100      |
+      |        |               |
       +--------+---------------+
       |  OSPF  |      110      |
       +--------+---------------+
