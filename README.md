@@ -8,8 +8,12 @@ Interior Gateway Routing Protocol
  水平分割使指閘道器會紀錄所接收到的路徑資訊是由哪一個網路介面而來的，同時不可將此路徑傳回給同樣的網路介面，避免造成迴圈。
  
  
+                                                  Routing Table A
+                                                  
  
-                                  Router A
+ 
+ 
+                                  Router A           
                                   
                                  s0      s1
                                  /         \
