@@ -1,4 +1,4 @@
-# CCNP_IGRP
+# CCNP IGRP
 Interior Gateway Routing Protocol
 
 # Convergence, 收斂的方法
