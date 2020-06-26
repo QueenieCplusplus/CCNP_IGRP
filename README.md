@@ -7,19 +7,22 @@ Interior Gateway Routing Protocol
 
  水平分割使指閘道器會紀錄所接收到的路徑資訊是由哪一個網路介面而來的，同時不可將此路徑傳回給同樣的網路介面，避免造成迴圈。
  
+ 當 GW 1 （ RouterC E0 ）和 Net 1 中斷時，GW 2 (Router A s0) 經由 GW 1 到達 Net 1 時，距離為 2，一旦中斷，GW 2 不會再對 GW 1 廣播這條路徑，GW 1 也停止廣播此網路至 Net 1 的路徑，經過幾回合路徑更新後，各個閘道會發現此網路 Net 1 是 unreachabel，便不會造成迴圈了。
+ 
                                                
                                                 
                                   Router A           
                                   
+                                     GW2
                                  s0      s1
                                  /         \
                  192.168.1.0    /           \  192.168.3.0
                                /             \
                               /               \
-                            s1   s0 ----- s1   s0   
-                            
+                            s1   s0 ----- s1   s0    
+                                                
                                  192.168.2.0
-                           
+                                                       GW1
                        Router B             Router C    E0 ---X--- E0  Router D
                        
                                                          192.168.4.0
