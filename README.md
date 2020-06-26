@@ -218,6 +218,7 @@ Interior Gateway Routing Protocol
 
 (3) 每 90 秒廣播一次。
 
+(4) 不支援 VLSM。
 
 
 
