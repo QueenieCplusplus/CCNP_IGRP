@@ -246,6 +246,10 @@ Interior Gateway Routing Protocol
 
 # 預設的距離值
 
+預設的距離值 （100、120）
+
+EIGRP 
+
       +--------+---------------+
       | 路由方  |  distance val |
       +--------+---------------+
