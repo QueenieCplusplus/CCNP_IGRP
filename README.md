@@ -227,5 +227,19 @@ Interior Gateway Routing Protocol
 (4) 不支援 VLSM。
 
 
+# IGRP 的參考用參數
 
+(影響 metric value/hops count)
+
+1. Bandwidth 頻寬
+
+2. Delay 時間
+
+3. Load 負載
+
+4. MTU 最大傳送單元（傳輸位元組）
+
+5. Reliability 可靠度、可信度
+
+5.
 
