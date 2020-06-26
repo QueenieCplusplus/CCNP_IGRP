@@ -3,11 +3,13 @@ Interior Gateway Routing Protocol
 
 # Convergence, 收斂的方法
 
-* Split Horizon Update, 水平分割
+* Split Horizon Update, 水平分割更新法
 
  水平分割使指閘道器會紀錄所接收到的路徑資訊是由哪一個網路介面而來的，同時不可將此路徑傳回給同樣的網路介面，避免造成迴圈。
  
  當 GW 1 （ RouterC E0 ）和 Net 1 中斷時，GW 2 (Router A s0) 經由 GW 1 到達 Net 1 時，距離為 2，一旦中斷，GW 2 不會再對 GW 1 廣播這條路徑，GW 1 也停止廣播此網路至 Net 1 的路徑，經過幾回合路徑更新後，各個閘道會發現此網路 Net 1 是 unreachabel，便不會造成迴圈了。
+ 
+ 路由器 A 和 路由器 B 的 192.168.4.0 這網段是由路由器 C 所學習來的，所以不會反向更新路徑。
  
                                                
                                                 
