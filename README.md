@@ -5,6 +5,8 @@ Interior Gateway Routing Protocol
 
 * Split Horizon Update, 水平分割更新法
 
+(移除不正確資訊)
+
  水平分割使指閘道器會紀錄所接收到的路徑資訊是由哪一個網路介面而來的，同時不可將此路徑傳回給同樣的網路介面，避免造成迴圈。
  
  當 GW 1 （ RouterC E0 ）和 Net 1 中斷時，GW 2 (Router A s0) 經由 GW 1 到達 Net 1 時，距離為 2，一旦中斷，GW 2 不會再對 GW 1 廣播這條路徑，GW 1 也停止廣播此網路至 Net 1 的路徑，經過幾回合路徑更新後，各個閘道會發現此網路 Net 1 是 unreachabel，便不會造成迴圈了。
@@ -88,6 +90,8 @@ Interior Gateway Routing Protocol
     
 * Poison Reverse + * Triggered Updates, 毒性逆向 ＋ 觸發更新
 
+(移除不正確資訊)
+
 此法規定原本最先廣播該路徑的 GW 遇到路徑中斷時，必須將路徑修改至無限長 (= 16)，此資訊亦將保留若干週期。觸發更新則是當閘道器收到故障通知時，會立刻廣播，不會等到下一個路徑更新時方才廣播。
 
 實際觀察路由表變化，來知曉 Poison Reverse 的運作機制，倘若 路由器 C 介面 E0 線路中斷， metric 值會變成 infinite，路由器 B 會送 Poison Reverse 給路由器 C ，告知此網段無法存取 unaccessable。
@@ -127,6 +131,8 @@ Interior Gateway Routing Protocol
  
    
 * Hold Down Timer, 倒數計時更新法
+
+（防止迴路）
 
 此更新方式是用來解決故障資訊比正當資訊傳送的慢的問題，原理是讓故障資訊保持充足時間傳送，當閘道器收到此網路 unreachable 時，一定時間內，例如 60 秒內，閘道器不會再接收關於這網路的路徑資訊。
 
