@@ -82,11 +82,15 @@ Interior Gateway Routing Protocol
     +-----------+-----+--------+
     |192.168.4.0| E0  | 0/down |
     +-----------+-----+--------+
+    
+    
+* Hold Down Timer, 倒數計時更新法
+ 
  
 
 * Poison Reverse, 毒性逆向
 
-* Hold Down Timer
+
 
 * Triggered Updates, 觸發更新
 
