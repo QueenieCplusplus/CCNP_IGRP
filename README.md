@@ -3,6 +3,8 @@ Interior Gateway Routing Protocol
 
 # Convergence, 收斂的方法
 
+# 水平分割
+
 * Split Horizon Update, 水平分割更新法
 
 (移除不正確資訊)
@@ -86,7 +88,7 @@ Interior Gateway Routing Protocol
     +-----------+-----+--------+
     
  
- 
+# 觸發更新 
     
 * Poison Reverse + * Triggered Updates, 毒性逆向 ＋ 觸發更新
 
@@ -128,7 +130,8 @@ Interior Gateway Routing Protocol
     |192.168.4.0| E0  |infinite|
     +-----------+-----+--------+
  
- 
+
+# 延長時間
    
 * Hold Down Timer, 倒數計時更新法
 
